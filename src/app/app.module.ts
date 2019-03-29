@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 //Roots
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,7 +22,8 @@ import { PortafolioItemComponent } from './Components/Pages/portafolio-item/port
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
