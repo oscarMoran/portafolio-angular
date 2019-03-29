@@ -9,12 +9,24 @@ export class PageInformationService implements  OnInit {
 
   info : IpageInformation = {} ;
   loaded = false;
-  constructor( public _http : HttpClient) { 
+  equipo : any[] = [];
+  constructor( private _http : HttpClient) { 
+    this.getInfo();
+    this.getEquipo();
+  }
+
+  private getInfo(){
     this._http.get('assets/data/data-page.json').subscribe ( response =>{ 
       this.loaded = true;
       this.info = response;
-      return this.info;
     });
+  }
+
+  private getEquipo(){
+    this._http.get('https://angular-html-75781.firebaseio.com/equipo.json').subscribe(
+      (response: any[]) => {
+        this.equipo = response;
+      });
   }
 
   ngOnInit() {

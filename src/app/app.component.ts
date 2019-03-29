@@ -12,6 +12,5 @@ export class AppComponent {
     public pageInformationService : PageInformationService
   ){
     
-    console.log(pageInformationService.info);
   }
 }
