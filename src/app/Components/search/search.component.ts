@@ -14,8 +14,7 @@ export class SearchComponent implements OnInit {
   public product : IProductDetail[] = [];
   public  restult : IProductDetail[] = [];
 
-  constructor(private activatedRoute : ActivatedRoute, private productService : ProductosService) {
-    console.log(this.productService);
+  constructor(public activatedRoute : ActivatedRoute, public productService : ProductosService) {
     this.activatedRoute.params.subscribe( param =>{ 
       
       var term = param['termino'].length > 0 ? param['termino'].toLowerCase() : null;
