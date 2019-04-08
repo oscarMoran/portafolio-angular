@@ -11,10 +11,27 @@
   <link rel="stylesheet" href="assets/css/aurora-theme-base.min.css">
   <link rel="stylesheet" href="assets/css/urku.css">
   <link rel="stylesheet" href="assets//css/animate.css">
+  <link rel="stylesheet" href="assets/css/AutumnLeaf.min.css">
 </head>
 <body class="top-fixed">
   <app-root></app-root>
   <script src="assets/js/svg4everybody.min.js"></script>
+  <script src="assets/js/jquery-2.1.4.min.js"></script>
+  <script src="assets/js/greensock.js"></script>
+  <script src="assets/js/AutumnLeaf.min.js"></script>
   <script>svg4everybody();</script>
+  <script>
+
+      $.AutumnLeafStart({
+        leavesfolder: "assets/img/AutumnLeaves/",
+        howmanyimgsare: 8,
+        initialleaves: 10,
+        maxyposition: -10,
+        multiplyclick: true,
+        multiplynumber: 2,
+        infinite: true,
+        fallingsequence: 4000
+      });
+</script>
 </body>
 </html>
